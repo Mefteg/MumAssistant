@@ -3,15 +3,17 @@ package com.ladybugriders.mumassistant;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class FeedingData {
-    private int m_date;
+import java.util.Date;
 
-    public int getDate() {
-        return m_date;
+public class FeedingData {
+    private long m_date;
+
+    public Date getDate() {
+        return new Date(m_date);
     }
 
-    public void setDate(int m_date) {
-        this.m_date = m_date;
+    public void setDate(Date date) {
+        this.m_date = date.getTime();
     }
 
     public JSONObject serialize() throws JSONException {
