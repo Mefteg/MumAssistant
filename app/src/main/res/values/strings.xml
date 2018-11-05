@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MumAssistant</string>
+    <string name="lastFeeding">Last feeding</string>
+    <string name="startFeeding">Start feeding</string>
+</resources>
