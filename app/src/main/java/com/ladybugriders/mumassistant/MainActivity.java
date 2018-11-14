@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         m_main = new Main();
+        m_main.readFromFile(getBaseContext());
 
         setContentView(R.layout.activity_main);
 
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
                 feeding.setDate(new Date());
 
                 m_main.getAssistantData().getFeedings().add(feeding);
+
+                m_main.writeToFile(getBaseContext());
 
                 updateViews();
             }

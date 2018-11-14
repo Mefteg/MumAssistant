@@ -1,8 +1,10 @@
 package com.ladybugriders.mumassistant;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class FeedingData {
@@ -21,5 +23,9 @@ public class FeedingData {
         object.put("date", m_date);
 
         return object;
+    }
+
+    public void deserialize(JSONObject json) throws JSONException {
+        m_date = json.getLong("date");
     }
 }

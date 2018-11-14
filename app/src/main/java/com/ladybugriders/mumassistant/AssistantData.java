@@ -34,4 +34,16 @@ public class AssistantData {
 
         return json;
     }
+
+    public void deserialize(JSONObject json) throws JSONException {
+        JSONArray feedings = json.getJSONArray("feedings");
+        int feedingCount = feedings.length();
+        m_feedings = new ArrayList<>(feedingCount);
+        for (int i = 0; i < feedingCount; ++i)
+        {
+            FeedingData feeding = new FeedingData();
+            feeding.deserialize(feedings.getJSONObject(i));
+            m_feedings.add(feeding);
+        }
+    }
 }
