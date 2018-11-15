@@ -32,7 +32,7 @@ public class Main {
     public void readFromFile(Context context) {
         try {
             String ret = "";
-            InputStream inputStream = context.openFileInput("config.txt");
+            InputStream inputStream = context.openFileInput("assistant_data.json");
 
             if ( inputStream != null ) {
                 InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
@@ -63,7 +63,7 @@ public class Main {
 
     public void writeToFile(Context context) {
         try {
-            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput("assistant_data.txt", Context.MODE_PRIVATE));
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput("assistant_data.json", Context.MODE_PRIVATE));
             outputStreamWriter.write(m_assistantData.serialize().toString());
             outputStreamWriter.close();
         }

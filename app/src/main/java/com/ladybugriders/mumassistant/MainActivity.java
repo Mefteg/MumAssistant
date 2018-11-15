@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
                 updateViews();
             }
         });
+
+        updateViews();
     }
 
     protected void updateViews() {
