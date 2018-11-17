@@ -2,4 +2,5 @@
 <resources>
     <string name="lastFeeding">Dernier allaitement</string>
     <string name="startFeeding">Débuter l\'allaitement</string>
+    <string name="date_of_last_feeding">Date du dernier allaitement</string>
 </resources>
