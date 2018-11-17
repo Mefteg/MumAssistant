@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+        // Sort feedings anti-chronologically.
         Collections.sort(feedings, new Comparator<FeedingData>() {
                     @Override
                     public int compare(FeedingData feedingData, FeedingData t1) {
@@ -76,9 +77,5 @@ public class MainActivity extends AppCompatActivity {
 
         m_adapter.clear();
         m_adapter.addAll(dates);
-
-        FeedingData lastFeeding = feedings.get(feedings.size() - 1);
-        TextView lastStartFeedingValueLabel = findViewById(R.id.last_feeding_value_label);
-        lastStartFeedingValueLabel.setText(lastFeeding.getDate().toString());
     }
 }
