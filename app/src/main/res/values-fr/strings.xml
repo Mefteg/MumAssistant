@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lastFeeding">Dernier allaitement</string>
+    <string name="startFeeding">Débuter l\'allaitement</string>
+    <string name="date_of_last_feeding">Date du dernier allaitement</string>
+</resources>

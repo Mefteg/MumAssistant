@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">MumAssistant</string>
+    <string name="app_name" translatable="false">MumAssistant</string>
     <string name="lastFeeding">Last feeding</string>
     <string name="startFeeding">Start feeding</string>
+    <string name="date_of_last_feeding">Date of last feeding</string>
 </resources>
