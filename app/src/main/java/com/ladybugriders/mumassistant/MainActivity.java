@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -71,8 +72,10 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
         ArrayList<String> dates = new ArrayList<>(feedings.size());
+        SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm - dd/MM/yyyy");
         for (FeedingData feeding : feedings) {
-            dates.add(feeding.getDate().toString());
+            Date date = feeding.getDate();
+            dates.add(dateFormat.format(date));
         }
 
         m_adapter.clear();
