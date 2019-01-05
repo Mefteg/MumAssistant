@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -36,16 +37,24 @@ public class MainActivity extends AppCompatActivity {
         startFeedingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Create a new feeding data and the current date.
                 FeedingData feeding = new FeedingData();
                 feeding.setDate(new Date());
 
+                // Add the new feeding data.
                 m_main.getAssistantData().getFeedings().add(feeding);
 
+                // Save the new data to the file.
                 m_main.writeToFile(getBaseContext());
 
+                // Add the corresponding entry in the list.
                 m_adapter.add(feeding.getDate().toString());
 
+                // Update all the views.
                 updateViews();
+
+                // Display a toast to inform that everything is ok.
+                Toast.makeText(MainActivity.this, R.string.saved_successfuly, Toast.LENGTH_SHORT).show();
             }
         });
 
