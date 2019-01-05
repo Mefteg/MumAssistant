@@ -19,7 +19,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private Main m_main = null;
-    private ArrayAdapter<String> m_adapter = null;
+    private FeedingDataAdapter m_adapter = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +28,7 @@ public class MainActivity extends AppCompatActivity {
         m_main = new Main();
         m_main.readFromFile(getBaseContext());
 
-        m_adapter = new ArrayAdapter<>(MainActivity.this,
-                android.R.layout.simple_list_item_1);
+        m_adapter = new FeedingDataAdapter(MainActivity.this, m_main);
 
         setContentView(R.layout.activity_main);
 
@@ -41,14 +40,11 @@ public class MainActivity extends AppCompatActivity {
                 FeedingData feeding = new FeedingData();
                 feeding.setDate(new Date());
 
-                // Add the new feeding data.
-                m_main.getAssistantData().getFeedings().add(feeding);
+                // Add the corresponding entry in the list.
+                m_adapter.add(feeding);
 
                 // Save the new data to the file.
                 m_main.writeToFile(getBaseContext());
-
-                // Add the corresponding entry in the list.
-                m_adapter.add(feeding.getDate().toString());
 
                 // Update all the views.
                 updateViews();
@@ -87,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             dates.add(dateFormat.format(date));
         }
 
-        m_adapter.clear();
-        m_adapter.addAll(dates);
+        //m_adapter.clear();
+        //m_adapter.addAll(dates);
     }
 }

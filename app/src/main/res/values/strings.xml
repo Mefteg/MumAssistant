@@ -4,4 +4,9 @@
     <string name="startFeeding">Start feeding</string>
     <string name="date_of_last_feeding">Date of last feeding</string>
     <string name="saved_successfuly">Saved !</string>
+    <string name="remove_entry_message_feeding_alert_dialog">Remove this entry ?</string>
+    <string name="ok_alert_dialog">OK</string>
+    <string name="cancel_alert_dialog">Cancel</string>
+    <string name="removed_successfuly">Remove !</string>
+    <string name="remove_button_feeding">Remove</string>
 </resources>

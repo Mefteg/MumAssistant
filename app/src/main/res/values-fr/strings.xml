@@ -3,5 +3,10 @@
     <string name="lastFeeding">Dernier allaitement</string>
     <string name="startFeeding">Débuter l\'allaitement</string>
     <string name="date_of_last_feeding">Date du dernier allaitement</string>
-    <string name="saved_successfuly">Enregistré !</string>
+    <string name="saved_successfuly">Enregistrée !</string>
+    <string name="remove_entry_message_feeding_alert_dialog">Supprimer cette entrée ?</string>
+    <string name="ok_alert_dialog">OK</string>
+    <string name="cancel_alert_dialog">Annuler</string>
+    <string name="removed_successfuly">Supprimée !</string>
+    <string name="remove_button_feeding">Supprimer</string>
 </resources>
